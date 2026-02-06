@@ -1,0 +1,49 @@
+# --- 1. Security (CRITICAL) ---
+.env
+.env.local
+kaggle.json
+secrets.py
+config_local.py
+
+# --- 2. Virtual Environments & Python ---
+.venv/
+venv/
+__pycache__/
+*.py[oc]
+*.egg-info/
+.pytest_cache/
+.cache/
+build/
+dist/
+wheels/
+uv.lock
+
+# --- 3. Data & Outputs (Prevent Large File Crashes) ---
+# Ignore all data folders
+data/
+output/
+logs/
+quarantine/
+
+# Ignore specific large file types anywhere in the project
+*.csv
+*.parquet
+*.jsonl
+*.json
+*.zip
+*.tar.gz
+*.h5
+*.pkl
+
+# ...But keep the gitkeep files so folder structures exist
+!data/.gitkeep
+!output/.gitkeep
+!logs/.gitkeep
+
+# --- 4. IDE & OS Junk ---
+.vscode/
+.idea/
+.idx/
+.DS_Store
+Thumbs.db
+*.log
